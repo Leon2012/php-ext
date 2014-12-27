@@ -1,0 +1,8 @@
+php_hello.lo: /Users/kentchen/GitHub/php/php-5.5.20/ext/php_hello/php_hello.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/kentchen/GitHub/php/php-5.5.20/ext/php_hello $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/kentchen/GitHub/php/php-5.5.20/ext/php_hello/php_hello.c -o php_hello.lo 
+$(phplibdir)/php_hello.la: ./php_hello.la
+	$(LIBTOOL) --mode=install cp ./php_hello.la $(phplibdir)
+
+./php_hello.la: $(shared_objects_php_hello) $(PHP_HELLO_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_php_hello) $(PHP_HELLO_SHARED_LIBADD)
+
