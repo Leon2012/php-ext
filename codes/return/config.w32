@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("return", "for return support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("return", "enable return support", "no");
+
+if (PHP_RETURN != "no") {
+	EXTENSION("return", "return.c");
+}
+
