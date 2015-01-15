@@ -34,6 +34,29 @@
     zend_print_zval_r((zv), 0 TSRMLS_CC); \
     Z_DELREF_P((zv));
 
+//字符串类型参数
+ZEND_BEGIN_ARG_INFO(params_str_arginfo, 0)
+    ZEND_ARG_INFO(0, a)
+    ZEND_ARG_INFO(0, b)
+ZEND_END_ARG_INFO()
+
+static PHP_FUNCTION(params_str) {
+    char *str = "";
+    int str_len = 0;
+    long i = 0;
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "|sl", &str, &str_len, &i) == FAILURE) {
+        return;
+    }
+
+    php_printf("string(%d) value:", str_len);
+    PHPWRITE(str, str_len);
+    php_printf("\n");
+
+    php_printf("int(%d)\n", i);
+    php_printf("\n");
+}
+
+
 
 //基本类型参数
 ZEND_BEGIN_ARG_INFO(params_add_arginfo, 0)
@@ -166,6 +189,7 @@ const zend_function_entry params_functions[] = {
 	PHP_FE(params_add,	params_add_arginfo)		
     PHP_FE(params_dump, params_dump_arginfo)
     PHP_FE(params_array, params_array_arginfo)
+    PHP_FE(params_str, params_str_arginfo)
 	PHP_FE_END	
 };
 /* }}} */
