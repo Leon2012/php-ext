@@ -1,0 +1,8 @@
+inis.lo: /Users/kentchen/GitHub/php/php-5.5.20/ext/inis/inis.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/kentchen/GitHub/php/php-5.5.20/ext/inis $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/kentchen/GitHub/php/php-5.5.20/ext/inis/inis.c -o inis.lo 
+$(phplibdir)/inis.la: ./inis.la
+	$(LIBTOOL) --mode=install cp ./inis.la $(phplibdir)
+
+./inis.la: $(shared_objects_inis) $(INIS_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_inis) $(INIS_SHARED_LIBADD)
+

@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("inis", "for inis support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("inis", "enable inis support", "no");
+
+if (PHP_INIS != "no") {
+	EXTENSION("inis", "inis.c");
+}
+
