@@ -10,7 +10,9 @@
 
 [4，INI参数设置](https://github.com/Leon2012/php-ext/blob/master/04.md)
 
-[5，调用第三方库](https://github.com/Leon2012/php-ext/blob/master/05.md)
+[5，数组](https://github.com/Leon2012/php-ext/blob/master/05.md)
+
+[6，调用第三方库](https://github.com/Leon2012/php-ext/blob/master/06.md)
 
 
 ##### 参考
