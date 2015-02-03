@@ -1,0 +1,8 @@
+global.lo: /Users/kentchen/GitHub/php/php-5.5.20/ext/global/global.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/kentchen/GitHub/php/php-5.5.20/ext/global $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/kentchen/GitHub/php/php-5.5.20/ext/global/global.c -o global.lo 
+$(phplibdir)/global.la: ./global.la
+	$(LIBTOOL) --mode=install cp ./global.la $(phplibdir)
+
+./global.la: $(shared_objects_global) $(GLOBAL_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_global) $(GLOBAL_SHARED_LIBADD)
+

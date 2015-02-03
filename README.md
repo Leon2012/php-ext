@@ -12,7 +12,9 @@
 
 [5，数组](https://github.com/Leon2012/php-ext/blob/master/05.md)
 
-[6，调用第三方库](https://github.com/Leon2012/php-ext/blob/master/06.md)
+[6，Global变量](https://github.com/Leon2012/php-ext/blob/master/06.md)
+
+[7，调用第三方库](https://github.com/Leon2012/php-ext/blob/master/07.md)
 
 
 ##### 参考
