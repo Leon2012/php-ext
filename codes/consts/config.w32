@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("consts", "for consts support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("consts", "enable consts support", "no");
+
+if (PHP_CONSTS != "no") {
+	EXTENSION("consts", "consts.c");
+}
+
