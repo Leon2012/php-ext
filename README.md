@@ -16,7 +16,7 @@
 
 [7，常量](https://github.com/Leon2012/php-ext/blob/master/07.md)
 
-[8，调用第三方库](https://github.com/Leon2012/php-ext/blob/master/08.md)
+[8，调用php函数](https://github.com/Leon2012/php-ext/blob/master/08.md)
 
 
 ##### 参考
