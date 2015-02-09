@@ -18,6 +18,8 @@
 
 [8，调用php函数](https://github.com/Leon2012/php-ext/blob/master/08.md)
 
+[9，类与对像1](https://github.com/Leon2012/php-ext/blob/master/09.md)
+
 
 ##### 参考
 
