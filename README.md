@@ -21,6 +21,10 @@
 [9，类与对像1](https://github.com/Leon2012/php-ext/blob/master/09.md)
 
 
+#### 附录
+
+[1，gdb调试PHP扩展函数](https://github.com/Leon2012/php-ext/blob/master/001.md)
+
 ##### 参考
 
 [https://github.com/sgolemon/phptek2013](https://github.com/sgolemon/phptek2013)
