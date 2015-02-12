@@ -26,6 +26,7 @@
 
 [12，资源](https://github.com/Leon2012/php-ext/blob/master/12.md)
 
+[13，包装第三方库](https://github.com/Leon2012/php-ext/blob/master/13.md)
 
 #### 附录
 

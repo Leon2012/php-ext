@@ -1,0 +1,8 @@
+libs.lo: /Users/kentchen/GitHub/php/php-5.5.20/ext/libs/libs.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/kentchen/GitHub/php/php-5.5.20/ext/libs $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/kentchen/GitHub/php/php-5.5.20/ext/libs/libs.c -o libs.lo 
+$(phplibdir)/libs.la: ./libs.la
+	$(LIBTOOL) --mode=install cp ./libs.la $(phplibdir)
+
+./libs.la: $(shared_objects_libs) $(LIBS_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_libs) $(LIBS_SHARED_LIBADD)
+
