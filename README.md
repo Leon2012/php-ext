@@ -20,7 +20,7 @@
 
 [9，类与对像1](https://github.com/Leon2012/php-ext/blob/master/09.md)
 
-10，类与对像2
+[10，类与对像2](https://github.com/Leon2012/php-ext/blob/master/10.md)
 
 11，类与对像3
 
