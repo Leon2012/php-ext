@@ -156,6 +156,39 @@ static int hello_count_elements(zval *object, long *count TSRMLS_DC) {
     return SUCCESS;
 }
 
+static HashTable* hello_get_debug_info(zval *object, int *is_temp TSRMLS_DC) {
+    php_printf("call hello_get_debug_info \n");
+
+    hello_object *ho = HELLO_FETCH_OBJECT(object);
+    HashTable *props = Z_OBJPROP_P(object);
+    HashTable *ht;
+    int i;
+
+    ALLOC_HASHTABLE(ht);
+    ZEND_INIT_SYMTABLE_EX(ht, 0 + zend_hash_num_elements(props), 0);
+    zend_hash_copy(ht, props, (copy_ctor_func_t) zval_add_ref, NULL, sizeof(zval *));
+
+    *is_temp = 1;
+    return ht;
+}
+
+static int hello_compare_objects(zval *object1, zval *object2 TSRMLS_DC) {
+    hello_object *ho1 = HELLO_FETCH_OBJECT(object1);
+    hello_object *ho2 = HELLO_FETCH_OBJECT(object2);
+    int result;
+    if (memcmp(ho1, ho2, sizeof(hello_object)) == 0) {
+        result = 0; /* equal */
+    } else {
+        result = 1; /* not orderable */
+    }
+
+    // result = strcmp(ho1->name, ho2->name);
+    php_printf("result : %d\n", result);
+
+    return result;
+}
+
+
 PHP_MINIT_FUNCTION(objects3){
     zend_class_entry ce;
     INIT_CLASS_ENTRY(ce, "Hello", hello_methods)
@@ -167,6 +200,8 @@ PHP_MINIT_FUNCTION(objects3){
     hello_handlers.clone_obj = hello_clone;
     //hello_handlers.get = hello_get;
     hello_handlers.count_elements = hello_count_elements;
+    hello_handlers.get_debug_info = hello_get_debug_info;
+    hello_handlers.compare_objects = hello_compare_objects;
     return SUCCESS;
 }
 
