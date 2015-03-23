@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("objects3", "for objects3 support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("objects3", "enable objects3 support", "no");
+
+if (PHP_OBJECTS3 != "no") {
+	EXTENSION("objects3", "objects3.c");
+}
+
