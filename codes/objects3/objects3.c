@@ -188,6 +188,19 @@ static int hello_compare_objects(zval *object1, zval *object2 TSRMLS_DC) {
     return result;
 }
 
+static zval* hello_read_property(zval *object, zval *member, int type, const struct _zend_literal *key TSRMLS_DC) {
+    php_printf("call hello_read_property function\n");
+    return member;
+}
+
+
+static int hello_get_class_name(const zval *object, const char **class_name, zend_uint *class_name_len, int parent TSRMLS_DC) {
+    //php_printf("class name : %d\n", (int)*class_name_len);
+    char *name = "Test";
+    *class_name = name;
+    *class_name_len = strlen(name);
+    return SUCCESS;
+}
 
 PHP_MINIT_FUNCTION(objects3){
     zend_class_entry ce;
@@ -202,6 +215,8 @@ PHP_MINIT_FUNCTION(objects3){
     hello_handlers.count_elements = hello_count_elements;
     hello_handlers.get_debug_info = hello_get_debug_info;
     hello_handlers.compare_objects = hello_compare_objects;
+    //hello_handlers.read_property = hello_read_property;
+    hello_handlers.get_class_name = hello_get_class_name;
     return SUCCESS;
 }
 

@@ -10,8 +10,8 @@ $obj = new Hello("leon", 32);
 //var_dump($obj);
 $obj->foo = "bar";
 //var_dump($obj);
-
-
+echo "foo:" . $obj->foo . "\n";
+echo "class name111:" . get_class($obj) . "\n";
 //echo "obj: "; 
 //$obj->greet();
 //echo $obj."_abc";
@@ -28,6 +28,8 @@ $obj1 = clone $obj;
 $obj2 = new Hello("jacky", 30);
 
 echo "compare:".bool2str($obj == $obj2)."\n";
+
+
 
 
 function bool2str($bool){
