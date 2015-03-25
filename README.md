@@ -31,6 +31,7 @@
 #### 附录
 
 [1，gdb调试PHP扩展函数](https://github.com/Leon2012/php-ext/blob/master/001.md)
+[2，常用全局宏](https://github.com/Leon2012/php-ext/blob/master/002.md)
 
 ##### 参考
 

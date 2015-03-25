@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("globalss", "for globalss support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("globalss", "enable globalss support", "no");
+
+if (PHP_GLOBALSS != "no") {
+	EXTENSION("globalss", "globalss.c");
+}
+
