@@ -21,4 +21,7 @@ print_r(dump_zval_value(new stdClass()));
 echo "value:". dump_zval_value(1.23) . "\n";
 //echo "value:". dump_zval_value(array("arr1")) . "\n";
 
+
+echo convert_zval("10") . "\n";
+
 ?>

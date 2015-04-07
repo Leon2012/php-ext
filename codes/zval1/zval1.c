@@ -51,6 +51,7 @@ static int le_zval1;
 const zend_function_entry zval1_functions[] = {
 	PHP_FE(dump_zval_type,	DUMP_ZVAL_TYPE_ARGINFO)		
 	PHP_FE(dump_zval_value, DUMP_ZVAL_VALUE_ARGINFO)
+	PHP_FE(convert_zval, DUMP_ZVAL_VALUE_ARGINFO)
 	PHP_FE_END	/* Must be the last line in zval1_functions[] */
 };
 /* }}} */
@@ -214,6 +215,17 @@ PHP_FUNCTION(dump_zval_value)
 
 }
 
+
+PHP_FUNCTION(convert_zval)
+{
+	zval *zv;
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "z", &zv) == FAILURE) {
+		return;
+	}
+
+	convert_to_double(zv);
+	RETURN_ZVAL(zv, 1, 0);
+}
 
 
 /*
