@@ -34,6 +34,8 @@
 
 [2，常用全局宏](https://github.com/Leon2012/php-ext/blob/master/002.md)
 
+[3，zval](https://github.com/Leon2012/php-ext/blob/master/003.md)
+
 ##### 参考
 
 [https://github.com/sgolemon/phptek2013](https://github.com/sgolemon/phptek2013)
