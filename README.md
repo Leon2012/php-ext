@@ -2,39 +2,39 @@
 
 #### 目录
 
-[1，创建一个新的扩展](https://github.com/Leon2012/php-ext/blob/master/01.md)
+[1，创建一个新的扩展](./01.md)
 
-[2，参数传递](https://github.com/Leon2012/php-ext/blob/master/02.md)
+[2，参数传递](./02.md)
 
-[3，返回值](https://github.com/Leon2012/php-ext/blob/master/03.md)
+[3，返回值](./03.md)
 
-[4，INI参数设置](https://github.com/Leon2012/php-ext/blob/master/04.md)
+[4，INI参数设置](./04.md)
 
-[5，数组](https://github.com/Leon2012/php-ext/blob/master/05.md)
+[5，数组](./05.md)
 
-[6，Global变量](https://github.com/Leon2012/php-ext/blob/master/06.md)
+[6，Global变量](./06.md)
 
-[7，常量](https://github.com/Leon2012/php-ext/blob/master/07.md)
+[7，常量](./07.md)
 
-[8，调用php函数](https://github.com/Leon2012/php-ext/blob/master/08.md)
+[8，调用php函数](./08.md)
 
-[9，类与对象1](https://github.com/Leon2012/php-ext/blob/master/09.md)
+[9，类与对象1](./09.md)
 
-[10，类与对象2(自定义object存储)](https://github.com/Leon2012/php-ext/blob/master/10.md)
+[10，类与对象2(自定义object存储)](./10.md)
 
-[11，类与对象3(object handlers)](https://github.com/Leon2012/php-ext/blob/master/11.md)
+[11，类与对象3(object handlers)](./11.md)
 
-[12，资源](https://github.com/Leon2012/php-ext/blob/master/12.md)
+[12，资源](./12.md)
 
-[13，包装第三方库](https://github.com/Leon2012/php-ext/blob/master/13.md)
+[13，包装第三方库](./13.md)
 
 #### 附录
 
-[1，gdb调试PHP扩展函数](https://github.com/Leon2012/php-ext/blob/master/001.md)
+[1，gdb调试PHP扩展函数](./001.md)
 
-[2，常用全局宏](https://github.com/Leon2012/php-ext/blob/master/002.md)
+[2，常用全局宏](./002.md)
 
-[3，zval](https://github.com/Leon2012/php-ext/blob/master/003.md)
+[3，zval](./003.md)
 
 ##### 参考
 
