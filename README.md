@@ -41,5 +41,6 @@
 [https://github.com/sgolemon/phptek2013](https://github.com/sgolemon/phptek2013)
 
 [http://www.walu.cc/phpbook/](http://www.walu.cc/phpbook/)
+[https://wikitech.wikimedia.org/wiki/GDB_with_PHP](https://wikitech.wikimedia.org/wiki/GDB_with_PHP)
 
 
